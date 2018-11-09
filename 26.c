@@ -12,8 +12,37 @@ void ps(char s[]);
 void swap(int *a,int *b);
 void BubbleSort(int a[],int n,int b);
 
+int isNum(char c){
+	return c-48>=0 && c-48<=9;
+}
+
 int main(){
- 	
+ 	char szTest[1000]={0};
+ 	int len;
+ 	char b[100];
+ 	FILE *f;
+	f=fopen("fee.txt","r");
+	double sum=0;
+ 	do{
+ 		fgets(b,sizeof(b),f);
+ 		if(b[0]=='O'){
+ 		double i=0;
+ 		if(isNum(b[7])){i=(b[4]-48)*1000+(b[5]-48)*100+(b[6]-48)*10+b[7]-48;
+		 }
+		else if(isNum(b[6])){i=(b[4]-48)*100+(b[5]-48)*10+b[6]-48;
+		 }else{
+		 	i=(b[5]-48)*10+b[4]-48;
+		 }
+		 
+		sum+=i;
+		 }
+ 		//pd(strlen(b)); 
+ 		//printf("%s",a);
+	 }
+ 	while(!feof(f));
+ 	double d=((int)sum/180+1)*0.17;
+	printf("%.2lf",d);
+ 	fclose(f);
 	return 0;
 }
 void pd(int x){
