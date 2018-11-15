@@ -1,44 +1,32 @@
-/* 
+ï»¿/* 
 Coder:117503445
 https://github.com/117503445/XDOJ
 GNU GPLV3 
 */ 
 #include<stdio.h>
-void pd(int x);
-void pld(int x);
-void pc(char c);
-void plc(char c);
-void ps(char s[]);
+
+#define p(x) printf("%d",x)
+#define pl(x) printf("%d\n",x)
+#define pc(x) printf("%c",x)
+#define plc(x) printf("%c\n",x)
+#define ps(x) printf(x)
+
 void swap(int *a,int *b);
 void BubbleSort(int a[],int n,int b);
 
 int main(){
- 	
+
 	return 0;
 }
-void pd(int x){
-	printf("%d",x);
-}
-void pld(int x){
-	printf("%d\n",x);
-}
-void pc(char c){
-	printf("%c",c);
-}
-void plc(char c){
-	printf("%c\n",c);
-}
-void ps(char s[]){
-	printf(s);
-}
+
 void swap(int *a,int *b){
 	int t=*a;
 	*a=*b;
 	*b=t;
 }
-//a intÊı×é
-//n Êı×é³¤¶È 
-//b 0:ÉıĞò,1:½µĞò
+//a intæ•°ç»„
+//n æ•°ç»„é•¿åº¦ 
+//b 0:å‡åº,1:é™åº
 //Exp: a,sizeof(a)/sizeof(a[0]),1 
 void BubbleSort(int a[],int n,int b){
 	int i,j;
@@ -50,6 +38,3 @@ void BubbleSort(int a[],int n,int b){
 		}
 	}
 }
-//printf("%d",);
-//scanf("%d",&);
-
