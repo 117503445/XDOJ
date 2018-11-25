@@ -21,13 +21,11 @@ int f(int a){
 int main(){
 	int i;
 	int n;
-	int a[100];
 	scanf("%d",&n);
 	for(i=0;i<n;i++){
-		scanf("%d",&a[i]);
-	}
-	for(i=0;i<n;i++){
-		if(f(a[i])%3==0)ps("yes\n");else ps("no\n");
+		int t;
+		scanf("%d",&t);
+		if(f(t)%3==0)ps("yes\n");else ps("no\n");
 	}
 	return 0;
 }
