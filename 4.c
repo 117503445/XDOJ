@@ -18,9 +18,9 @@ int main()
 {
 	int n,m;
 	scanf("%d%d",&n,&m);
-	char s[n][32];//队名
-	int a[n][8];//队名index,胜场数,平局数,负场数
-	//进球数,失球数,积分,净胜球
+	char s[n][32];//??
+	int a[n][8];//??index,???,???,???
+	//???,???,??,???
 	int i,j;
 	
 	for(i=0;i<n;i++){
@@ -113,3 +113,4 @@ void BubbleSort(int a[], int n, int b)
 		}
 	}
 }
+
