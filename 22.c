@@ -1,59 +1,53 @@
-/* 
-Coder:117503445
-https://github.com/117503445/XDOJ
-GNU GPLV3 
-*/ 
-#include<stdio.h>
-int main(){
-	int t;
-	scanf("%d",&t);
-	
-	int t1;
-	int h[10]={0};
-	int sn=0;
-	
-	for(t1=0;t1<t;t1++){
-		int n;
-		scanf("%d",&n);
-		int a[n];
-		int i,j;
-		for(i=0;i<n;i++){scanf("%d",&a[i]);
+#include <stdio.h>
+int main()
+{
+	int deng(int a[], int n);
+	int n, x, i, j;
+	int a[100] = {0};
+	int b[100] = {0};
+	int c[100] = {0};
+	scanf("%d", &n);
+	for (i = 0; i < n; i++)
+	{
+		scanf("%d", &x);
+		for (j = 0; j < x; j++)
+		{
+			scanf("%d", &a[j]);
 		}
-		
-		
-		
-		
-			//xia JB pai
-	for(i=0;i<n;i++)
-		for(j=0;j<n;j++){
-			if(a[i]>a[j]){
-				int t=a[i];
-				a[i]=a[j];
-				a[j]=t;
-			}
-		}
-		int d=a[1]-a[0];
-		for(i=0;i<n-1;i++){
-			if(a[i+1]-a[i]!=d){
-				h[t1]=-1;
-				//printf("no\n");
-				break;
-			}
-			if(i==n-2)//printf("%d\n",-d);
-			h[t1]=-d;
-		}
-		
-//		for(i=0;i<n;i++){
-//			scanf("%d",&);
-//		}
-
+		b[i] = deng(a, x);
+		c[i] = a[1] - a[0];
 	}
-	int i;
-	for(i=0;i<10;i++){
-		if(h[i]==-1)printf("no\n");
-		if(h[i]>0)printf("%d\n",h[i]);
+	for (i = 0; i < n; i++)
+	{
+		if (b[i] == 1)
+			printf("%d\n", c[i]);
+		if (b[i] == 2)
+			printf("no\n");
 	}
 	return 0;
 }
-//printf("%d",);
-//scanf("%d",&);
+int deng(int a[], int n)
+{
+	int i, j, b, c, d, t, e;
+	for (i = 1; i < n; i++)
+	{
+		for (j = 0; j < n - i; j++)
+		{
+			a[j] > a[j + 1] ? (t = a[j], a[j] = a[j + 1], a[j + 1] = t) : (a[j] = a[j], a[j + 1] = a[j + 1]);
+		}
+	}
+	j = 1;
+	for (i = 0; i < n; i++)
+	{
+		t = a[1] - a[0];
+		c = a[i + 1] - a[i];
+		if (t != c)
+			break;
+		if (t == c)
+			j++;
+	}
+	if (j == i)
+		return (1);
+	if (j != i)
+		return (2);
+}
