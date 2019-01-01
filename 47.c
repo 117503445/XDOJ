@@ -6,13 +6,13 @@ GNU GPLV3
 #include <stdio.h>
 int main()
 {
+	int r[] = {0, 0, 0, 1, 1, 1, 1, 6, 10, 11};
 	while (1)
 	{
-		int n;
-		scanf("%d", &n);
-		if (n == 0)
-			break;
-		printf("%d\n",(n-1)%9+1);
+		int a;
+		scanf("%d", &a);
+		if(a==0)break;
+		printf("%d\n", r[a]);
 	}
 	return 0;
 }
