@@ -1,0 +1,70 @@
+/d2/d3/d7
+cd ..
+cd /
+cd /d1/d6
+cd d4/d5
+pwd
+/d1/d6/d4/d5
+
+/d1/d2
+cd ..
+cd ..
+pwd
+/
+
+/d1/d2
+cd ..
+cd d1
+cd /
+pwd
+/
+
+/123/4234
+cd ..
+cd /423
+cd /
+cd 32/43555
+pwd
+/32/43555
+
+/
+cd ..
+cd ..
+pwd
+/
+
+/
+cd /
+pwd
+
+/
+cd 123
+cd /987/65/3
+cd ..
+pwd
+/987/65
+
+/123/324
+cd 1
+cd ..
+cd ..
+cd ..
+cd ..
+pwd
+/
+
+/
+cd 1
+cd 2
+cd 3
+cd 4
+cd /423
+pwd
+/423
+
+/
+123
+cd 12
+cd 2342
+cd ..
+pwd
